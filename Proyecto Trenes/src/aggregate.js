@@ -15,7 +15,7 @@ db.trenes.aggregate([
     {
         $project:{
             _id:0,
-            "Total":{$multiply:["$Precio", "$Pasajeros"]},
+            Total:{$multiply:["$Precio", "$Pasajeros"]},
             año: { $year: "$Salida" },
             mes: { $month: "$Salida" },
             dia: { $dayOfMonth: "$Salida" }
